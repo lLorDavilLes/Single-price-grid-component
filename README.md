@@ -1,1 +1,1 @@
-# Single-price-grid-component
+Single-price-grid-component using display flex and grid for responsive design
