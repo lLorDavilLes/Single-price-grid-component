@@ -1,0 +1,178 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+  --Cyan: hsl(179, 62%, 43%);
+  --Cyan2: hsl(179, 68%, 50%);
+  --BrightYellow: hsl(71, 73%, 54%);
+  --LightGray: hsl(204, 43%, 93%);
+  --GrayishBlue: hsl(218, 22%, 67%);
+  --White: rgb(255, 255, 255);
+}
+
+/*Mobile first */
+
+body{
+  font-family: 'Karla', sans-serif;
+  background-color: var(--LightGray);
+}
+
+main{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+section{
+  width: 100%;
+  height: 33%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.section-1{
+  background-color: var(--White);
+  border-radius: 0.5rem 0.5rem 0 0;
+  gap: 1.3rem;
+}
+
+.section-1 h1{
+  color: var(--Cyan2); 
+  font-weight: bold;
+  font-size: 1.3rem;
+  margin-top: 1rem;
+}
+
+.section-1 h2{
+  color: var(--BrightYellow);
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.section-1 p {
+  color: var(--GrayishBlue);
+  font-weight: bold;
+  line-height: 1.6;
+  text-align: left;
+  padding-right:1rem;
+}
+
+.section-2{
+  background-color: var(--Cyan);
+  color: var(--White);
+  padding: 2rem;
+} 
+
+.section-2 h3{
+  font-weight: bold;
+}
+
+.section-2 p{
+  color: var(--LightGray);
+}
+.section-2 p span{
+  font-size: 2.5rem;
+  color: var(--White);
+}
+
+.section-2 button{
+  color: var(--White);
+  font-weight: bold;
+  font-size: 1rem;
+  background-color: var(--BrightYellow);
+  border: transparent;
+  height: 3rem;
+  width: 19rem;
+  border-radius: 0.2rem;
+  margin-top: 1rem;
+  box-shadow: 2px 2px 20px rgb(107, 101, 101);
+
+}
+
+
+.section-3{
+  background-color: var(--Cyan2);
+  color: var(--White);
+  padding-left: 1.6rem;
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+
+.section-3 h3{
+  font-weight: bold;
+  margin: 1.3rem 0 1.3rem 0;
+}
+
+.section-3 ul{
+  list-style: none;
+  line-height: 1.2;
+}
+
+.section-3 li{
+  color: var(--LightGray);
+}
+
+/* responsive design for Desktop: 1440px*/
+
+@media only screen and ( min-width: 1440px){
+  body{
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+  }
+
+  main{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    width: 50rem;
+    height: 35rem;
+    border-radius: 1rem;
+    box-shadow: 5px 5px 50px 5px rgb(103, 101, 101);
+  }
+
+  section{
+    display: flex;
+    padding: 2rem;
+  }
+
+  .section-1{
+    grid-column: 1/-1;
+    height: 100%;
+    width: 100%;
+  }
+
+  .section-1 h1{
+    font-size: 2rem;
+  }
+
+  .section-1 h2{
+    font-size: 1.4rem;
+  }
+
+  .section-1 p{
+    font-size: 1.2rem;
+    color: var(--GrayishBlue);
+  }
+
+  .section-2{
+    grid-column: 1/7;
+    height: 100%;
+    border-radius: 0 0 0 0.5rem;
+
+  }
+
+  .section-3{
+    grid-column: 7/-1;
+    height: 100%;
+    padding-top: 1rem;
+    border-radius: 0 0 0.5rem;
+  }
+}
